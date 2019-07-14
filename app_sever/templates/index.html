@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+    <head> 
+        <link rel="stylesheet" href="http://cdnjs.loli.net/ajax/libs/mdui/0.4.2/css/mdui.min.css">
+        <script src="http://cdnjs.loli.net/ajax/libs/mdui/0.4.2/js/mdui.min.js"></script>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes" />
+        <style type="text/css"> 
+            body{ padding-bottom:50px;}
+            .fixed{ position:fixed;bottom:0px;}  
+            .center
+                {
+                    position: fixed;
+                    left: 0px;
+                    right: 0px;
+                    margin-left:auto;
+                    margin-right:auto;
+                }
+        </style> 
+
+    </head>
+    <body class="">
+        <div class="mdui-toolbar mdui-color-amber-600">
+                <div class="mdui-center"> <font style="font-weight: 300;" size="5" color= "#FFEBCD" >搜索</font></div>
+        </div>
+        <div style="height: 10px"></div>
+        <img src="http://106.12.58.143:2043/?path=ljxc.png" style="width: 100%" class="mdui-center"> 
+        <div style="height: 30px"></div>
+        <div action="search_word">
+            <div class="mdui-center mdui-container" style="width: 80％">
+                <form action="ser_text" method="post" >
+                    <input class="mdui-textfield-input mdui-col-xs-8"  type="text" name="ser_text" placeholder="垃圾名称"/>
+                    <button class="mdui-btn mdui-btn-dense  mdui-ripple mdui-col-xs-4 mdui-color-yellow-300">搜索</button>
+                </form>
+            </div>
+            <div style="height: 60px"></div>
+            <div class="mdui-card mdui-center" style="width: 90%;">
+                <div class="mdui-container mdui-p-t-2 mdui-p-b-2">
+                    <div class="mdui-col-xs-8">
+                        <div class="mdui-center"> <font style="font-weight: 300;line-height:32px;" size="5" color= "#000000">物体识别</br>(拍摄，上传)</font></div>
+                    </div>
+                    <div class="mdui-col-xs-4">
+                        <form method="post" action="obj_photo" enctype="multipart/form-data">
+                            <div class="mdui-center" style="width: 20px">
+                                <input class="" type="file" size="30" name="obj_photo" style="width: 20px;position:absolute;opacity:0;"/>
+                            </div>
+                                <i class="mdui-icon material-icons mdui-center" >camera_alt</i>
+                            </br>
+                            <div class="mdui-center" style="width: 20px">
+                                <input class="mdui-center" type="submit" value="提交信息" class="button-new" style="width: 20px;position:absolute;opacity:0;"/>
+                            </div>
+                                <i class="mdui-icon material-icons mdui-center">file_upload</i>
+                        </form>
+                    </div>
+                </div>
+            </div>        
+            <div style="height: 40px"></div>
+            <div class="mdui-card mdui-center" style="width: 90%;">
+                <div class=" mdui-container mdui-p-t-2 mdui-p-b-2">
+                    <div class="mdui-col-xs-8">
+                        <div class="mdui-center"> <font style="font-weight: 300;line-height:32px;" size="5" color= "#000000">发票识别</br>(扫描，上传)</font></div>
+                    </div>
+                    <div class="mdui-col-xs-4">
+                        <form method="post" action="page_photo" enctype="multipart/form-data">
+                            <div class="mdui-center" style="width: 20px">
+                                <input class="" type="file" size="30" name="page_photo" style="width: 20px;position:absolute;opacity:0;"/>
+                            </div>
+                                <i class="mdui-icon material-icons mdui-center" >camera_alt</i>
+                            </br>
+                            <div class="mdui-center" style="width: 20px">
+                                <input class="mdui-center " type="submit" value="提交信息" class="button-new" style="width: 20px;position:absolute;opacity:0;"/>
+                            </div>
+                                <i class="mdui-icon material-icons mdui-center">file_upload</i>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+        <div class="center fixed">
+            <div class="mdui-appbar">
+                <div class="mdui-toolbar mdui-color-amber-400">
+                    <div class="mdui-container">
+                        <div class="mdui-col-xs-3 " style="background-color:rgba(255,235,205,0.4);border-radius: 13px">
+                            <form name='search' action="search" method="POST">
+                                <a href='javascript:document.search.submit();' class="mdui-btn mdui-btn-icon mdui-center"><i class="mdui-icon material-icons">search</i></a>
+                            </form>
+                        </div>
+
+                        <div class="mdui-col-xs-3">
+                            <form name='grade' action="grade" method="POST">
+                                <a href='javascript:document.grade.submit();' class="mdui-btn mdui-btn-icon mdui-center"><i class="mdui-icon material-icons">grade</i></a>
+                            </form>
+                        </div>
+
+                        <div class="mdui-col-xs-3">
+                            <form name='memory' action="memory" method="POST">
+                                <a href='javascript:document.memory.submit();' class="mdui-btn mdui-btn-icon mdui-center"><i class="mdui-icon material-icons">memory</i></a>
+                            </form>
+                        </div>
+
+                        <div class="mdui-col-xs-3">
+                            <form name='account' action="account" method="POST">
+                                <a href='javascript:document.account.submit();' class="mdui-btn mdui-btn-icon mdui-center"><i class="mdui-icon material-icons">account_circle</i></a>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
+
+        

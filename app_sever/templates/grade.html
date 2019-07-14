@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head> 
+        <link rel="stylesheet" href="http://cdnjs.loli.net/ajax/libs/mdui/0.4.2/css/mdui.min.css">
+        <script src="http://cdnjs.loli.net/ajax/libs/mdui/0.4.2/js/mdui.min.js"></script>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes" />
+        <style type="text/css"> 
+            body{ padding-bottom:50px;}
+            .fixed{ position:fixed;bottom:0px;}  
+            .center
+                {
+                    position: fixed;
+                    left: 0px;
+                    right: 0px;
+                    margin-left:auto;
+                    margin-right:auto;
+                }
+        </style> 
+
+    </head>
+    <body class="">
+        <div class="mdui-toolbar mdui-color-amber-600">
+                <div class="mdui-center"> <font style="font-weight: 300;" size="5" color= "#FFEBCD" >记录</font></div>
+        </div>
+        <div style="height: 20px"></div>
+        <div id="view" class="mdui-center mdui-p-x-2" style="max-width:600px;position:relative;height:70%;overflow:auto">
+                {% for post in posts %}
+            <div class="mdui-card mdui-p-x-5">
+                {{ post.msg }}
+            </div>
+                {% endfor %}
+        </div>
+        <div class="center fixed">
+            <div class="mdui-appbar">
+                <div class="mdui-toolbar mdui-color-amber-400">
+                    <div class="mdui-container">
+                        <div class="mdui-col-xs-3 ">
+                            <form name='search' action="search" method="POST">
+                                <a href='javascript:document.search.submit();' class="mdui-btn mdui-btn-icon mdui-center"><i class="mdui-icon material-icons">search</i></a>
+                            </form>
+                        </div>
+
+                        <div class="mdui-col-xs-3" style="background-color:rgba(255,235,205,0.4);border-radius: 13px">
+                            <form name='grade' action="grade" method="POST">
+                                <a href='javascript:document.grade.submit();' class="mdui-btn mdui-btn-icon mdui-center"><i class="mdui-icon material-icons">grade</i></a>
+                            </form>
+                        </div>
+
+                        <div class="mdui-col-xs-3">
+                            <form name='memory' action="memory" method="POST">
+                                <a href='javascript:document.memory.submit();' class="mdui-btn mdui-btn-icon mdui-center"><i class="mdui-icon material-icons">memory</i></a>
+                            </form>
+                        </div>
+
+                        <div class="mdui-col-xs-3">
+                            <form name='account' action="account" method="POST">
+                                <a href='javascript:document.account.submit();' class="mdui-btn mdui-btn-icon mdui-center"><i class="mdui-icon material-icons">account_circle</i></a>
+                            </form>
+                        </div>
+                    </div>
+                </di>
+            </div>
+        </div>
+    </body>
+
+
+        
